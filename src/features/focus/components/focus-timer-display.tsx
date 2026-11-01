@@ -210,13 +210,14 @@ export function FocusTimerDisplay({ session, onSessionUpdated }: FocusTimerDispl
           <button
             type="button"
             onClick={toggleWakeLock}
-            className={`p-2 rounded-xl border transition-colors cursor-pointer min-h-[36px] min-w-[36px] flex items-center justify-center ${
+            className={`p-2 rounded-xl border transition-colors cursor-pointer min-h-[36px] min-w-[36px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-[#d4af37]/50 ${
               isWakeLockActive
                 ? 'bg-[#d4af37]/15 border-[#d4af37] text-[#d4af37]'
                 : 'bg-white/[0.05] hover:bg-white/[0.1] border-white/[0.08] text-zinc-400 hover:text-zinc-200'
             }`}
             title={isWakeLockActive ? 'Screen will stay awake' : 'Enable Keep Screen Awake'}
             aria-label={isWakeLockActive ? 'Disable Keep Screen Awake' : 'Enable Keep Screen Awake'}
+            aria-pressed={isWakeLockActive}
           >
             {isWakeLockActive ? <Sun className="w-4 h-4 text-[#d4af37]" /> : <SunDim className="w-4 h-4" />}
           </button>
@@ -225,8 +226,9 @@ export function FocusTimerDisplay({ session, onSessionUpdated }: FocusTimerDispl
           <button
             type="button"
             onClick={toggleSound}
-            className="p-2 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] border border-white/[0.08] text-zinc-400 hover:text-zinc-200 transition-colors cursor-pointer min-h-[36px] min-w-[36px] flex items-center justify-center"
+            className="p-2 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] border border-white/[0.08] text-zinc-400 hover:text-zinc-200 transition-colors cursor-pointer min-h-[36px] min-w-[36px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-[#d4af37]/50"
             aria-label={isSoundEnabled ? 'Mute audio chimes' : 'Enable audio chimes'}
+            aria-pressed={isSoundEnabled}
           >
             {isSoundEnabled ? <Volume2 className="w-4 h-4 text-[#d4af37]" /> : <VolumeX className="w-4 h-4" />}
           </button>

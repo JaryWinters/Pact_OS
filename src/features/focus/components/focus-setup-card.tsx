@@ -235,6 +235,8 @@ export function FocusSetupCard({
       <button
         type="button"
         disabled={isLoading}
+        title="Toggle Timer (Space)"
+        aria-keyshortcuts="Space"
         onClick={handleStart}
         className="w-full py-4 rounded-2xl bg-gradient-to-r from-[#d4af37] via-[#e2c056] to-[#b39226] text-black font-semibold text-sm sm:text-base shadow-lg shadow-[#d4af37]/25 hover:brightness-110 active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
       >

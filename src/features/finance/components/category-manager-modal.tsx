@@ -170,13 +170,13 @@ export function CategoryManagerModal({
                     key={c.tag}
                     type="button"
                     onClick={() => setNewCatColor(c.tag)}
-                    className={`w-6 h-6 rounded-full ${c.class} transition-all ${
+                    className={`w-6 h-6 rounded-full ${c.class} transition-all focus:ring-2 focus:ring-amber-500 ${
                       newCatColor === c.tag
                         ? 'ring-2 ring-white ring-offset-2 ring-offset-zinc-950 scale-110'
                         : 'opacity-70 hover:opacity-100'
                     }`}
                     title={c.label}
-                    aria-label={`Select color ${c.label}`}
+                    aria-label={`Select ${c.label} color`}
                   />
                 ))}
               </div>
@@ -216,8 +216,9 @@ export function CategoryManagerModal({
                             <button
                               key={c.tag}
                               type="button"
+                              aria-label={`Select ${c.label} color`}
                               onClick={() => setEditingColor(c.tag)}
-                              className={`w-5 h-5 rounded-full ${c.class} ${
+                              className={`w-5 h-5 rounded-full ${c.class} focus:ring-2 focus:ring-amber-500 ${
                                 editingColor === c.tag ? 'ring-2 ring-white scale-110' : 'opacity-60'
                               }`}
                               title={c.label}

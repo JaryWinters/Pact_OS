@@ -287,6 +287,8 @@ export function FocusTimerDisplay({ session, onSessionUpdated }: FocusTimerDispl
           <button
             type="button"
             disabled={isLoadingAction}
+            title="Toggle Timer (Space)"
+            aria-keyshortcuts="Space"
             onClick={handleResume}
             className="flex-1 min-w-[140px] min-h-[44px] inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-gradient-to-r from-[#d4af37] to-[#b39226] text-black font-semibold text-sm shadow-lg shadow-[#d4af37]/20 hover:brightness-110 active:scale-95 transition-all cursor-pointer disabled:opacity-50"
           >
@@ -297,6 +299,8 @@ export function FocusTimerDisplay({ session, onSessionUpdated }: FocusTimerDispl
           <button
             type="button"
             disabled={isLoadingAction}
+            title="Toggle Timer (Space)"
+            aria-keyshortcuts="Space"
             onClick={handlePause}
             className="flex-1 min-w-[140px] min-h-[44px] inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-100 font-medium text-sm border border-white/[0.1] active:scale-95 transition-all cursor-pointer disabled:opacity-50"
           >
